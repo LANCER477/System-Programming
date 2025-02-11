@@ -99,7 +99,12 @@
     <ResourceCompile Include="Timer.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\meme.ico" />
     <Image Include="toolbar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\help.cur" />
+    <None Include="..\..\..\..\Downloads\Stalker\_arrow.cur" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
