@@ -39,7 +39,7 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             if (width == 10 || height == 10)
             {
-                MessageBox(hWnd, _T("Слишком маленькая область!"), _T("Внимание"), MB_OK | MB_ICONWARNING);
+                MessageBox(hWnd, _T("Слишком мал"), _T("Ало"), MB_OK | MB_ICONWARNING);
             }
             else
             {
