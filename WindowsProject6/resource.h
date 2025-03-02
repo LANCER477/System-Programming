@@ -19,6 +19,7 @@
 #define IDC_RADIO3                      1003
 #define IDC_BUTTON1                     1004
 #define IDC_STATIC                      -1
+#define IDC_STATIC1                      100
 
 // Next default values for new objects
 // 
