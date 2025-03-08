@@ -106,7 +106,6 @@ bool CheckWinner(wchar_t symbol)
     }
     return false;
 }
-//fdsfsfsfsfsdfdsf
 void ResetGame(HWND hWnd) {
     for (int i = 0; i < 9; i++) {
         buttonText[i] = L"-";
