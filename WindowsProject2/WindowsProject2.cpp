@@ -31,7 +31,7 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
         int id = LOWORD(wParam);
 
-        // Обработка кнопок игрового поля (1-9)
+       
         if (id >= IDC_BUTTON1 && id <= IDC_BUTTON9)
         {
             int index = id - IDC_BUTTON1;
@@ -40,16 +40,16 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 UpdateButtonText(hWnd, index);
                 moveCount++;
 
-                // Проверка победителя после обновления символа
+                
                 if (CheckWinner(currentSymbol)) {
-                    wstring message = (currentSymbol == L'X') ? L"X wins!" : L"O wins!";
-                    MessageBox(hWnd, message.c_str(), L"Game Over", MB_OK);
+                    wstring message = (currentSymbol == L'X') ? L"X Перемога" : L"O Перемога";
+                    MessageBox(hWnd, message.c_str(), L"Всё", MB_OK);
                     ResetGame(hWnd);
                     return TRUE;
                 }
 
                 if (moveCount == 9) {
-                    MessageBox(hWnd, L"Draw!", L"Game Over", MB_OK);
+                    MessageBox(hWnd, L"Ничья", L"Всё", MB_OK);
                     ResetGame(hWnd);
                     return TRUE;
                 }
@@ -57,16 +57,16 @@ BOOL CALLBACK DlgProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             return TRUE;
         }
 
-        // Обработка кнопки "Старт"
+       
         if (id == IDC_BUTTON10) {
             ResetGame(hWnd);
             return TRUE;
         }
 
-        // Блокировка изменения чекбокса после первого хода
+        
         if (moveCount > 0 && id == IDC_CHECK1) return TRUE;
 
-        // Установка первого хода
+        
         if (id == IDC_CHECK1) {
             playerX = SendMessage(GetDlgItem(hWnd, IDC_CHECK1), BM_GETCHECK, 0, 0) == BST_CHECKED;
         }
@@ -106,7 +106,7 @@ bool CheckWinner(wchar_t symbol)
     }
     return false;
 }
-
+//fdsfsfsfsfsdfdsf
 void ResetGame(HWND hWnd) {
     for (int i = 0; i < 9; i++) {
         buttonText[i] = L"-";
